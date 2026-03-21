@@ -40,7 +40,10 @@ app.get("/products", async (req, res) => {
     res.status(500).json({ error: "Failed to fetch products" });
   }
 });
-
+// ✅ ADD THIS HERE 👇
+app.get("/", (req, res) => {
+  res.send("Backend is working ✅");
+});
 // ✅ IMPORTANT: PORT FIX FOR RENDER
 const PORT = process.env.PORT || 5000;
 
